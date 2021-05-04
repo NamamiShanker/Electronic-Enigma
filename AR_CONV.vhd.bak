@@ -1,0 +1,74 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity AR_CONV is
+	port( X, A, B: in std_logic_vector(4 downto 0);
+	clk : in std_logic;
+			Y: out std_logic_vector(4 downto 0));
+end AR_CONV;
+
+architecture FUNCTIONALITY of AR_CONV is
+	signal tempA, tempB, tempX: std_logic_vector(5 downto 0);
+	signal M, N: std_logic_vector(5 downto 0);
+	SIGNAL Q,W,E : STD_logic;
+	signal out1, out2: std_logic_vector(5 downto 0);
+	
+	-- Addition and Subtraction Unit
+	component signed_unsigned is
+	  port (
+		 i_rst_l : in std_logic;
+		 i_clk   : in std_logic;
+		 i_a     : in std_logic_vector(5 downto 0);
+		 i_b     : in std_logic_vector(5 downto 0);
+		 y : out  std_logic_vector(5 downto 0)
+    );
+	end component;
+	
+	COMponent signed_unsigned_ADD is
+	  port (
+		 i_rst_l : in std_logic;
+		 i_clk   : in std_logic;
+		 i_a     : in std_logic_vector(5 downto 0);
+		 i_b     : in std_logic_vector(5 downto 0);
+		 y : out  std_logic_vector(5 downto 0)
+		 );
+	end COMPONEnt;
+	
+	component AND_2 is 
+		port (I0 ,I1:IN std_logic;
+				O0 : OUT std_logic);
+   end component;
+
+	component OR_2 is 
+		port (I0 ,I1:IN std_logic;
+				O0 : OUT std_logic);
+	end component;
+
+	begin
+		tempA(4 downto 0) <= A(4 downto 0);
+		tempA(5) <= '0';
+		tempB(4 downto 0) <= B(4 downto 0);
+		tempB(5) <= '0';
+		tempX(4 downto 0) <= X(4 downto 0);
+		tempX(5) <= '0';
+		M0: signed_unsigned port map ('1', clk, tempB, tempA, M);
+		N0: signed_unsigned_ADD port map ('1', clk, tempX, M, N);
+		
+		 U0 : AND_2 PORT MAP (N(4), N(3), Q);
+		 U1 : OR_2 PORT MAP (N(2), N(1), W);
+		 U2 : AND_2 PORT MAP (Q, W, E);
+		 
+		 M1: signed_unsigned port map ('1', clk, N, "011010", out1);
+		 N1 : signed_unsigned_ADD port map ('1', clk, N, "011010", out2);
+		 
+		 p0: process (E, N)
+			 BEGin
+				 IF E = '1' THEN 
+					Y(4 downto 0) <= out1(4 downto 0);
+				 ELSIF N(5) = '1' THEN
+					Y(4 downto 0) <= out2(4 downto 0);
+				 END IF ;
+		 END PROCESS;
+		
+end FUNCTIONALITY;

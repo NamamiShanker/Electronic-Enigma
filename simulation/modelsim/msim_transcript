@@ -1,0 +1,215 @@
+# Reading F:/EE_232_COURSE/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do electronic_enigma_pro_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying F:\EE_232_COURSE\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied F:\EE_232_COURSE\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/AND_2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity AND_2
+# -- Compiling architecture FUNC of AND_2
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/OR_2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity OR_2
+# -- Compiling architecture FUNC of OR_2
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/MATHCER_1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MATCHER_1
+# -- Compiling architecture STRUCTURE of MATCHER_1
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/MATCHER_2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MATCHER_2
+# -- Compiling architecture STRUCTURE of MATCHER_2
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/MATCHER_3.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MATCHER_3
+# -- Compiling architecture STRUCTURE of MATCHER_3
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/signed_unsigned.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signed_unsigned
+# -- Compiling architecture behave of signed_unsigned
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/signed_unsigned_ADD.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signed_unsigned_ADD
+# -- Compiling architecture behave of signed_unsigned_ADD
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/AR_CONV.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity AR_CONV
+# -- Compiling architecture FUNCTIONALITY of AR_CONV
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/EE_232.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package EE_232
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/XOR_2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity XOR_2
+# -- Compiling architecture FUNC of XOR_2
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/NOT_2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity NOT_2
+# -- Compiling architecture FUNC of NOT_2
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/D_FF.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package EE_232
+# -- Compiling entity D_FF
+# -- Compiling architecture FUNC of D_FF
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/MUX_2_1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package EE_232
+# -- Compiling entity mux_2_1
+# -- Compiling architecture func of mux_2_1
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/COUNTER.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package EE_232
+# -- Compiling entity COUNTER
+# -- Compiling architecture FUNC of COUNTER
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/FIVE_COMPONENT.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package EE_232
+# -- Compiling entity FIVE_COMPONENT
+# -- Compiling architecture FUNC of FIVE_COMPONENT
+# vcom -93 -work work {C:/Users/pnb/Desktop/EE_Project/ELECTRONIC_ENIGMA_PRO.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package EE_232
+# -- Compiling entity ELECTRONIC_ENIGMA_PRO
+# -- Compiling architecture FUNCTIONALITY of ELECTRONIC_ENIGMA_PRO
+# ** Warning: C:/Users/pnb/Desktop/EE_Project/ELECTRONIC_ENIGMA_PRO.vhd(27): Cannot associate port "Q" of mode BUFFER with port "Q0" of mode INOUT.
+# ** Warning: C:/Users/pnb/Desktop/EE_Project/ELECTRONIC_ENIGMA_PRO.vhd(30): Cannot associate port "Q" of mode BUFFER with port "Q1" of mode INOUT.
+# ** Warning: C:/Users/pnb/Desktop/EE_Project/ELECTRONIC_ENIGMA_PRO.vhd(33): Cannot associate port "Q" of mode BUFFER with port "Q2" of mode INOUT.
+# 
+vsim work.electronic_enigma_pro
+# vsim work.electronic_enigma_pro 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.ee_232
+# Loading work.electronic_enigma_pro(functionality)
+# Loading work.five_component(func)
+# Loading work.counter(func)
+# Loading work.xor_2(func)
+# Loading work.mux_2_1(func)
+# Loading work.not_2(func)
+# Loading work.and_2(func)
+# Loading work.or_2(func)
+# Loading work.d_ff(func)
+# Loading work.matcher_1(structure)
+# Loading ieee.numeric_std(body)
+# Loading work.ar_conv(functionality)
+# Loading work.signed_unsigned(behave)
+# Loading work.signed_unsigned_add(behave)
+# Loading work.matcher_2(structure)
+# Loading work.matcher_3(structure)
+add wave -position insertpoint  \
+sim:/electronic_enigma_pro/Q2 \
+sim:/electronic_enigma_pro/Q1 \
+sim:/electronic_enigma_pro/Q0 \
+sim:/electronic_enigma_pro/O \
+sim:/electronic_enigma_pro/LDNI \
+sim:/electronic_enigma_pro/LDN \
+sim:/electronic_enigma_pro/I \
+sim:/electronic_enigma_pro/D2 \
+sim:/electronic_enigma_pro/D1 \
+sim:/electronic_enigma_pro/D0 \
+sim:/electronic_enigma_pro/CLK
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: pnb  Hostname: DESKTOP-RN6JU8L  ProcessID: 9920
+# 
+#           Attempting to use alternate WLF file "./wlft707g6w".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft707g6w
+# 
+force -freeze sim:/electronic_enigma_pro/D2 00000 0
+force -freeze sim:/electronic_enigma_pro/D1 00000 0
+force -freeze sim:/electronic_enigma_pro/D0 00000 0
+force -freeze sim:/electronic_enigma_pro/LDNI 0 0
+force -freeze sim:/electronic_enigma_pro/LDN 0 0
+run
+force -freeze sim:/electronic_enigma_pro/LDNI 1 0
+run
+force -freeze sim:/electronic_enigma_pro/LDN 1 0
+force -freeze sim:/electronic_enigma_pro/LDNI 0 0
+force -freeze sim:/electronic_enigma_pro/CLK 1 0, 0 {5 ps} -r 10
+run
+force -freeze sim:/electronic_enigma_pro/I 01110 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00000 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00001 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00000 0
+run
+force -freeze sim:/electronic_enigma_pro/I 01101 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00000 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00001 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00000 0
+run
+force -freeze sim:/electronic_enigma_pro/I 01101 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00000 0
+run
+force -freeze sim:/electronic_enigma_pro/I 01001 0
+run
+force -freeze sim:/electronic_enigma_pro/I 00000 0
+run

@@ -1,0 +1,125 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLK'
+Slack : -5.594
+TNS   : -117.398
+
+Type  : Slow Model Setup 'LDNI'
+Slack : -4.915
+TNS   : -30.443
+
+Type  : Slow Model Setup 'I[0]'
+Slack : -4.365
+TNS   : -12.753
+
+Type  : Slow Model Setup 'AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -3.775
+TNS   : -18.214
+
+Type  : Slow Model Setup 'AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -3.677
+TNS   : -17.437
+
+Type  : Slow Model Hold 'AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -3.611
+TNS   : -15.362
+
+Type  : Slow Model Hold 'AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -2.901
+TNS   : -13.905
+
+Type  : Slow Model Hold 'I[0]'
+Slack : -2.350
+TNS   : -10.604
+
+Type  : Slow Model Hold 'LDNI'
+Slack : -1.800
+TNS   : -3.226
+
+Type  : Slow Model Hold 'CLK'
+Slack : 0.672
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK'
+Slack : -1.941
+TNS   : -61.301
+
+Type  : Slow Model Minimum Pulse Width 'LDNI'
+Slack : -1.777
+TNS   : -24.037
+
+Type  : Slow Model Minimum Pulse Width 'I[0]'
+Slack : -1.777
+TNS   : -9.197
+
+Type  : Slow Model Minimum Pulse Width 'AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'LDNI'
+Slack : -1.261
+TNS   : -3.044
+
+Type  : Fast Model Setup 'CLK'
+Slack : -1.244
+TNS   : -18.827
+
+Type  : Fast Model Setup 'I[0]'
+Slack : -1.064
+TNS   : -2.008
+
+Type  : Fast Model Setup 'AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -0.427
+TNS   : -1.818
+
+Type  : Fast Model Setup 'AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -0.399
+TNS   : -1.754
+
+Type  : Fast Model Hold 'AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -1.460
+TNS   : -6.576
+
+Type  : Fast Model Hold 'AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : -1.258
+TNS   : -6.118
+
+Type  : Fast Model Hold 'I[0]'
+Slack : -1.102
+TNS   : -5.549
+
+Type  : Fast Model Hold 'LDNI'
+Slack : -0.905
+TNS   : -2.029
+
+Type  : Fast Model Hold 'CLK'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK'
+Slack : -1.380
+TNS   : -41.380
+
+Type  : Fast Model Minimum Pulse Width 'LDNI'
+Slack : -1.222
+TNS   : -16.222
+
+Type  : Fast Model Minimum Pulse Width 'I[0]'
+Slack : -1.222
+TNS   : -6.222
+
+Type  : Fast Model Minimum Pulse Width 'AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[2]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

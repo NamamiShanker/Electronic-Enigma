@@ -1,0 +1,685 @@
+Analysis & Synthesis report for electronic_enigma_pro
+Wed Dec 09 21:08:22 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned_ADD:N1"
+ 13. Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned:M1"
+ 14. Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned_ADD:N0"
+ 15. Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned:M0"
+ 16. Port Connectivity Checks: "COUNTER:C2"
+ 17. Port Connectivity Checks: "COUNTER:C1"
+ 18. Port Connectivity Checks: "COUNTER:C0|CONTER:C0|D_FF:F0"
+ 19. Port Connectivity Checks: "COUNTER:C0"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Dec 09 21:08:22 2020           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; electronic_enigma_pro                           ;
+; Top-level Entity Name              ; ELECTRONIC_ENIGMA_PRO                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 160                                             ;
+;     Total combinational functions  ; 158                                             ;
+;     Dedicated logic registers      ; 55                                              ;
+; Total registers                    ; 55                                              ;
+; Total pins                         ; 43                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                              ;
++----------------------------------------------------------------------------+-----------------------+-----------------------+
+; Option                                                                     ; Setting               ; Default Value         ;
++----------------------------------------------------------------------------+-----------------------+-----------------------+
+; Device                                                                     ; EP2C5T144C8           ;                       ;
+; Top-level entity name                                                      ; ELECTRONIC_ENIGMA_PRO ; electronic_enigma_pro ;
+; Family name                                                                ; Cyclone II            ; Cyclone IV GX         ;
+; Use smart compilation                                                      ; Off                   ; Off                   ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                    ; On                    ;
+; Enable compact report table                                                ; Off                   ; Off                   ;
+; Restructure Multiplexers                                                   ; Auto                  ; Auto                  ;
+; Create Debugging Nodes for IP Cores                                        ; Off                   ; Off                   ;
+; Preserve fewer node names                                                  ; On                    ; On                    ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                   ; Off                   ;
+; Verilog Version                                                            ; Verilog_2001          ; Verilog_2001          ;
+; VHDL Version                                                               ; VHDL_1993             ; VHDL_1993             ;
+; State Machine Processing                                                   ; Auto                  ; Auto                  ;
+; Safe State Machine                                                         ; Off                   ; Off                   ;
+; Extract Verilog State Machines                                             ; On                    ; On                    ;
+; Extract VHDL State Machines                                                ; On                    ; On                    ;
+; Ignore Verilog initial constructs                                          ; Off                   ; Off                   ;
+; Iteration limit for constant Verilog loops                                 ; 5000                  ; 5000                  ;
+; Iteration limit for non-constant Verilog loops                             ; 250                   ; 250                   ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                    ; On                    ;
+; Infer RAMs from Raw Logic                                                  ; On                    ; On                    ;
+; Parallel Synthesis                                                         ; On                    ; On                    ;
+; DSP Block Balancing                                                        ; Auto                  ; Auto                  ;
+; NOT Gate Push-Back                                                         ; On                    ; On                    ;
+; Power-Up Don't Care                                                        ; On                    ; On                    ;
+; Remove Redundant Logic Cells                                               ; Off                   ; Off                   ;
+; Remove Duplicate Registers                                                 ; On                    ; On                    ;
+; Ignore CARRY Buffers                                                       ; Off                   ; Off                   ;
+; Ignore CASCADE Buffers                                                     ; Off                   ; Off                   ;
+; Ignore GLOBAL Buffers                                                      ; Off                   ; Off                   ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                   ; Off                   ;
+; Ignore LCELL Buffers                                                       ; Off                   ; Off                   ;
+; Ignore SOFT Buffers                                                        ; On                    ; On                    ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                   ; Off                   ;
+; Optimization Technique                                                     ; Balanced              ; Balanced              ;
+; Carry Chain Length                                                         ; 70                    ; 70                    ;
+; Auto Carry Chains                                                          ; On                    ; On                    ;
+; Auto Open-Drain Pins                                                       ; On                    ; On                    ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                   ; Off                   ;
+; Auto ROM Replacement                                                       ; On                    ; On                    ;
+; Auto RAM Replacement                                                       ; On                    ; On                    ;
+; Auto Shift Register Replacement                                            ; Auto                  ; Auto                  ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                  ; Auto                  ;
+; Auto Clock Enable Replacement                                              ; On                    ; On                    ;
+; Strict RAM Replacement                                                     ; Off                   ; Off                   ;
+; Allow Synchronous Control Signals                                          ; On                    ; On                    ;
+; Force Use of Synchronous Clear Signals                                     ; Off                   ; Off                   ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                   ; Off                   ;
+; Auto Resource Sharing                                                      ; Off                   ; Off                   ;
+; Allow Any RAM Size For Recognition                                         ; Off                   ; Off                   ;
+; Allow Any ROM Size For Recognition                                         ; Off                   ; Off                   ;
+; Allow Any Shift Register Size For Recognition                              ; Off                   ; Off                   ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                    ; On                    ;
+; Ignore translate_off and synthesis_off directives                          ; Off                   ; Off                   ;
+; Timing-Driven Synthesis                                                    ; Off                   ; Off                   ;
+; Report Parameter Settings                                                  ; On                    ; On                    ;
+; Report Source Assignments                                                  ; On                    ; On                    ;
+; Report Connectivity Checks                                                 ; On                    ; On                    ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                   ; Off                   ;
+; Synchronization Register Chain Length                                      ; 2                     ; 2                     ;
+; PowerPlay Power Optimization                                               ; Normal compilation    ; Normal compilation    ;
+; HDL message level                                                          ; Level2                ; Level2                ;
+; Suppress Register Optimization Related Messages                            ; Off                   ; Off                   ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                  ; 5000                  ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                  ; 5000                  ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                   ; 100                   ;
+; Clock MUX Protection                                                       ; On                    ; On                    ;
+; Auto Gated Clock Conversion                                                ; Off                   ; Off                   ;
+; Block Design Naming                                                        ; Auto                  ; Auto                  ;
+; SDC constraint protection                                                  ; Off                   ; Off                   ;
+; Synthesis Effort                                                           ; Auto                  ; Auto                  ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                    ; On                    ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                   ; Off                   ;
+; Analysis & Synthesis Message Level                                         ; Medium                ; Medium                ;
+; Disable Register Merging Across Hierarchies                                ; Auto                  ; Auto                  ;
+; Resource Aware Inference For Block RAM                                     ; On                    ; On                    ;
+; Synthesis Seed                                                             ; 1                     ; 1                     ;
++----------------------------------------------------------------------------+-----------------------+-----------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+; AND_2.vhd                        ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/AND_2.vhd                 ;         ;
+; OR_2.vhd                         ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/OR_2.vhd                  ;         ;
+; MATHCER_1.vhd                    ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/MATHCER_1.vhd             ;         ;
+; MATCHER_2.vhd                    ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/MATCHER_2.vhd             ;         ;
+; MATCHER_3.vhd                    ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/MATCHER_3.vhd             ;         ;
+; signed_unsigned.vhd              ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/signed_unsigned.vhd       ;         ;
+; signed_unsigned_ADD.vhd          ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/signed_unsigned_ADD.vhd   ;         ;
+; AR_CONV.vhd                      ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/AR_CONV.vhd               ;         ;
+; D_FF.vhd                         ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/D_FF.vhd                  ;         ;
+; MUX_2_1.vhd                      ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/MUX_2_1.vhd               ;         ;
+; EE_232.vhd                       ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/EE_232.vhd                ;         ;
+; XOR_2.vhd                        ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/XOR_2.vhd                 ;         ;
+; COUNTER.vhd                      ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/COUNTER.vhd               ;         ;
+; NOT_2.vhd                        ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/NOT_2.vhd                 ;         ;
+; ELECTRONIC_ENIGMA_PRO.vhd        ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/ELECTRONIC_ENIGMA_PRO.vhd ;         ;
+; CONTER.vhd                       ; yes             ; User VHDL File  ; C:/Users/pnb/Desktop/EE_Project/CONTER.vhd                ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 160   ;
+;                                             ;       ;
+; Total combinational functions               ; 158   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 72    ;
+;     -- 3 input functions                    ; 69    ;
+;     -- <=2 input functions                  ; 17    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 132   ;
+;     -- arithmetic mode                      ; 26    ;
+;                                             ;       ;
+; Total registers                             ; 55    ;
+;     -- Dedicated logic registers            ; 55    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 43    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 40    ;
+; Total fan-out                               ; 649   ;
+; Average fan-out                             ; 2.54  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; |ELECTRONIC_ENIGMA_PRO         ; 158 (3)           ; 55 (0)       ; 0           ; 0            ; 0       ; 0         ; 43   ; 0            ; |ELECTRONIC_ENIGMA_PRO                                          ; work         ;
+;    |AR_CONV:AR0|               ; 30 (10)           ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR0                              ; work         ;
+;       |signed_unsigned:M0|     ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR0|signed_unsigned:M0           ; work         ;
+;       |signed_unsigned:M1|     ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR0|signed_unsigned:M1           ; work         ;
+;       |signed_unsigned_ADD:N0| ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR0|signed_unsigned_ADD:N0       ; work         ;
+;       |signed_unsigned_ADD:N1| ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR0|signed_unsigned_ADD:N1       ; work         ;
+;    |AR_CONV:AR1|               ; 30 (10)           ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR1                              ; work         ;
+;       |signed_unsigned:M0|     ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR1|signed_unsigned:M0           ; work         ;
+;       |signed_unsigned:M1|     ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR1|signed_unsigned:M1           ; work         ;
+;       |signed_unsigned_ADD:N0| ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR1|signed_unsigned_ADD:N0       ; work         ;
+;       |signed_unsigned_ADD:N1| ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR1|signed_unsigned_ADD:N1       ; work         ;
+;    |COUNTER:C0|                ; 11 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0                               ; work         ;
+;       |AND_2:A1|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|AND_2:A1                      ; work         ;
+;       |CONTER:C0|              ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C0                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C0|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C0|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C0|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C1|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C1                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C1|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C1|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C1|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C2|              ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C2                     ; work         ;
+;          |AND_2:U1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C2|AND_2:U1            ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C2|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C2|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C2|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C3|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C3                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C3|D_FF:F0             ; work         ;
+;          |XOR_2:U0|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C3|XOR_2:U0            ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C3|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C3|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C4|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C4                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C4|D_FF:F0             ; work         ;
+;          |XOR_2:U0|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C4|XOR_2:U0            ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C4|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C0|CONTER:C4|mux_2_1:M1|AND_2:U2 ; work         ;
+;    |COUNTER:C1|                ; 11 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1                               ; work         ;
+;       |AND_2:A1|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|AND_2:A1                      ; work         ;
+;       |CONTER:C0|              ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C0                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C0|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C0|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C0|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C1|              ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C1                     ; work         ;
+;          |AND_2:U1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C1|AND_2:U1            ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C1|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C1|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C1|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C2|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C2                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C2|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C2|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C2|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C3|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C3                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C3|D_FF:F0             ; work         ;
+;          |XOR_2:U0|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C3|XOR_2:U0            ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C3|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C3|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C4|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C4                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C4|D_FF:F0             ; work         ;
+;          |XOR_2:U0|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C4|XOR_2:U0            ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C4|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C1|CONTER:C4|mux_2_1:M1|AND_2:U2 ; work         ;
+;    |COUNTER:C2|                ; 11 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2                               ; work         ;
+;       |AND_2:A1|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|AND_2:A1                      ; work         ;
+;       |CONTER:C0|              ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C0                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C0|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C0|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C0|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C1|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C1                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C1|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C1|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C1|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C2|              ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C2                     ; work         ;
+;          |AND_2:U1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C2|AND_2:U1            ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C2|D_FF:F0             ; work         ;
+;          |mux_2_1:M1|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C2|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C2|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C3|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C3                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C3|D_FF:F0             ; work         ;
+;          |XOR_2:U0|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C3|XOR_2:U0            ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C3|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C3|mux_2_1:M1|AND_2:U2 ; work         ;
+;       |CONTER:C4|              ; 2 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C4                     ; work         ;
+;          |D_FF:F0|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C4|D_FF:F0             ; work         ;
+;          |XOR_2:U0|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C4|XOR_2:U0            ; work         ;
+;          |mux_2_1:M1|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C4|mux_2_1:M1          ; work         ;
+;             |AND_2:U2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|COUNTER:C2|CONTER:C4|mux_2_1:M1|AND_2:U2 ; work         ;
+;    |MATCHER_1:M0|              ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|MATCHER_1:M0                             ; work         ;
+;    |MATCHER_2:M1|              ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|MATCHER_2:M1                             ; work         ;
+;    |MATCHER_3:M2|              ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ELECTRONIC_ENIGMA_PRO|MATCHER_3:M2                             ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; MATCHER_3:M2|Y[0]                                   ; MATCHER_3:M2|Mux5   ; yes                    ;
+; MATCHER_3:M2|Y[1]                                   ; MATCHER_3:M2|Mux5   ; yes                    ;
+; MATCHER_3:M2|Y[2]                                   ; MATCHER_3:M2|Mux5   ; yes                    ;
+; MATCHER_3:M2|Y[3]                                   ; MATCHER_3:M2|Mux5   ; yes                    ;
+; MATCHER_3:M2|Y[4]                                   ; MATCHER_3:M2|Mux5   ; yes                    ;
+; MATCHER_2:M1|Y[0]                                   ; MATCHER_2:M1|Mux5   ; yes                    ;
+; MATCHER_2:M1|Y[1]                                   ; MATCHER_2:M1|Mux5   ; yes                    ;
+; MATCHER_2:M1|Y[2]                                   ; MATCHER_2:M1|Mux5   ; yes                    ;
+; MATCHER_2:M1|Y[3]                                   ; MATCHER_2:M1|Mux5   ; yes                    ;
+; MATCHER_2:M1|Y[4]                                   ; MATCHER_2:M1|Mux5   ; yes                    ;
+; MATCHER_1:M0|Y[0]                                   ; MATCHER_1:M0|Mux5   ; yes                    ;
+; MATCHER_1:M0|Y[1]                                   ; MATCHER_1:M0|Mux5   ; yes                    ;
+; MATCHER_1:M0|Y[2]                                   ; MATCHER_1:M0|Mux5   ; yes                    ;
+; MATCHER_1:M0|Y[3]                                   ; MATCHER_1:M0|Mux5   ; yes                    ;
+; MATCHER_1:M0|Y[4]                                   ; MATCHER_1:M0|Mux5   ; yes                    ;
+; Number of user-specified and inferred latches = 15  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                ;
++-------------------------------------------------+-----------------------------------------------------------------+
+; Register name                                   ; Reason for Removal                                              ;
++-------------------------------------------------+-----------------------------------------------------------------+
+; AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[1] ; Merged with AR_CONV:AR1|signed_unsigned_ADD:N1|rs_SUM_RESULT[1] ;
+; AR_CONV:AR1|signed_unsigned:M1|rs_SUB_RESULT[0] ; Merged with AR_CONV:AR1|signed_unsigned_ADD:N1|rs_SUM_RESULT[0] ;
+; AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[1] ; Merged with AR_CONV:AR0|signed_unsigned_ADD:N1|rs_SUM_RESULT[1] ;
+; AR_CONV:AR0|signed_unsigned:M1|rs_SUB_RESULT[0] ; Merged with AR_CONV:AR0|signed_unsigned_ADD:N1|rs_SUM_RESULT[0] ;
+; Total Number of Removed Registers = 4           ;                                                                 ;
++-------------------------------------------------+-----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 55    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR1|Y[1] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR1|Y[4] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR0|Y[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |ELECTRONIC_ENIGMA_PRO|AR_CONV:AR0|Y[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned_ADD:N1"                                                      ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_rst_l   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_b[4..3] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_b[5]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_b[2]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_b[1]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_b[0]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[5]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned:M1"                                                          ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_rst_l   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_b[4..3] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_b[5]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_b[2]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_b[1]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_b[0]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y[5]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned_ADD:N0" ;
++---------+-------+----------+-----------------------------------+
+; Port    ; Type  ; Severity ; Details                           ;
++---------+-------+----------+-----------------------------------+
+; i_rst_l ; Input ; Info     ; Stuck at VCC                      ;
+; i_a[5]  ; Input ; Info     ; Stuck at GND                      ;
++---------+-------+----------+-----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "AR_CONV:AR0|signed_unsigned:M0" ;
++---------+-------+----------+-------------------------------+
+; Port    ; Type  ; Severity ; Details                       ;
++---------+-------+----------+-------------------------------+
+; i_rst_l ; Input ; Info     ; Stuck at VCC                  ;
+; i_a[5]  ; Input ; Info     ; Stuck at GND                  ;
+; i_b[5]  ; Input ; Info     ; Stuck at GND                  ;
++---------+-------+----------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER:C2"                                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; r      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; e      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; up_dnn ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER:C1"                                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; r      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; e      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; up_dnn ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER:C0|CONTER:C0|D_FF:F0" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; clrn ; Input ; Info     ; Stuck at VCC                   ;
+; pren ; Input ; Info     ; Stuck at VCC                   ;
++------+-------+----------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "COUNTER:C0"                                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; r      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; e      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; up_dnn ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Dec 09 21:08:16 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off electronic_enigma_pro -c electronic_enigma_pro
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file and_2.vhd
+    Info (12022): Found design unit 1: AND_2-FUNC
+    Info (12023): Found entity 1: AND_2
+Info (12021): Found 2 design units, including 1 entities, in source file or_2.vhd
+    Info (12022): Found design unit 1: OR_2-FUNC
+    Info (12023): Found entity 1: OR_2
+Info (12021): Found 2 design units, including 1 entities, in source file mathcer_1.vhd
+    Info (12022): Found design unit 1: MATCHER_1-STRUCTURE
+    Info (12023): Found entity 1: MATCHER_1
+Info (12021): Found 2 design units, including 1 entities, in source file matcher_2.vhd
+    Info (12022): Found design unit 1: MATCHER_2-STRUCTURE
+    Info (12023): Found entity 1: MATCHER_2
+Info (12021): Found 2 design units, including 1 entities, in source file matcher_3.vhd
+    Info (12022): Found design unit 1: MATCHER_3-STRUCTURE
+    Info (12023): Found entity 1: MATCHER_3
+Info (12021): Found 2 design units, including 1 entities, in source file signed_unsigned.vhd
+    Info (12022): Found design unit 1: signed_unsigned-behave
+    Info (12023): Found entity 1: signed_unsigned
+Info (12021): Found 2 design units, including 1 entities, in source file signed_unsigned_add.vhd
+    Info (12022): Found design unit 1: signed_unsigned_ADD-behave
+    Info (12023): Found entity 1: signed_unsigned_ADD
+Info (12021): Found 2 design units, including 1 entities, in source file ar_conv.vhd
+    Info (12022): Found design unit 1: AR_CONV-FUNCTIONALITY
+    Info (12023): Found entity 1: AR_CONV
+Info (12021): Found 2 design units, including 1 entities, in source file d_ff.vhd
+    Info (12022): Found design unit 1: D_FF-FUNC
+    Info (12023): Found entity 1: D_FF
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2_1.vhd
+    Info (12022): Found design unit 1: mux_2_1-func
+    Info (12023): Found entity 1: mux_2_1
+Info (12021): Found 1 design units, including 0 entities, in source file ee_232.vhd
+    Info (12022): Found design unit 1: EE_232
+Info (12021): Found 2 design units, including 1 entities, in source file xor_2.vhd
+    Info (12022): Found design unit 1: XOR_2-FUNC
+    Info (12023): Found entity 1: XOR_2
+Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
+    Info (12022): Found design unit 1: COUNTER-FUNC
+    Info (12023): Found entity 1: COUNTER
+Info (12021): Found 2 design units, including 1 entities, in source file not_2.vhd
+    Info (12022): Found design unit 1: NOT_2-FUNC
+    Info (12023): Found entity 1: NOT_2
+Info (12021): Found 2 design units, including 1 entities, in source file electronic_enigma_pro.vhd
+    Info (12022): Found design unit 1: ELECTRONIC_ENIGMA_PRO-FUNCTIONALITY
+    Info (12023): Found entity 1: ELECTRONIC_ENIGMA_PRO
+Info (12021): Found 2 design units, including 1 entities, in source file conter.vhd
+    Info (12022): Found design unit 1: CONTER-FUNC
+    Info (12023): Found entity 1: CONTER
+Info (12127): Elaborating entity "ELECTRONIC_ENIGMA_PRO" for the top level hierarchy
+Info (12128): Elaborating entity "COUNTER" for hierarchy "COUNTER:C0"
+Info (12128): Elaborating entity "CONTER" for hierarchy "COUNTER:C0|CONTER:C0"
+Info (12128): Elaborating entity "XOR_2" for hierarchy "COUNTER:C0|CONTER:C0|XOR_2:U0"
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "COUNTER:C0|CONTER:C0|mux_2_1:M0"
+Info (12128): Elaborating entity "NOT_2" for hierarchy "COUNTER:C0|CONTER:C0|mux_2_1:M0|NOT_2:UO"
+Info (12128): Elaborating entity "AND_2" for hierarchy "COUNTER:C0|CONTER:C0|mux_2_1:M0|AND_2:U1"
+Info (12128): Elaborating entity "OR_2" for hierarchy "COUNTER:C0|CONTER:C0|mux_2_1:M0|OR_2:U3"
+Info (12128): Elaborating entity "D_FF" for hierarchy "COUNTER:C0|CONTER:C0|D_FF:F0"
+Info (12128): Elaborating entity "MATCHER_1" for hierarchy "MATCHER_1:M0"
+Warning (10631): VHDL Process Statement warning at MATHCER_1.vhd(12): inferring latch(es) for signal or variable "Y", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Y[0]" at MATHCER_1.vhd(12)
+Info (10041): Inferred latch for "Y[1]" at MATHCER_1.vhd(12)
+Info (10041): Inferred latch for "Y[2]" at MATHCER_1.vhd(12)
+Info (10041): Inferred latch for "Y[3]" at MATHCER_1.vhd(12)
+Info (10041): Inferred latch for "Y[4]" at MATHCER_1.vhd(12)
+Info (12128): Elaborating entity "AR_CONV" for hierarchy "AR_CONV:AR0"
+Warning (10492): VHDL Process Statement warning at AR_CONV.vhd(68): signal "out2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at AR_CONV.vhd(70): signal "out1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "signed_unsigned" for hierarchy "AR_CONV:AR0|signed_unsigned:M0"
+Warning (10036): Verilog HDL or VHDL warning at signed_unsigned.vhd(18): object "ru_SUB_RESULT" assigned a value but never read
+Info (12128): Elaborating entity "signed_unsigned_ADD" for hierarchy "AR_CONV:AR0|signed_unsigned_ADD:N0"
+Warning (10036): Verilog HDL or VHDL warning at signed_unsigned_ADD.vhd(18): object "ru_SUM_RESULT" assigned a value but never read
+Info (12128): Elaborating entity "MATCHER_2" for hierarchy "MATCHER_2:M1"
+Warning (10631): VHDL Process Statement warning at MATCHER_2.vhd(12): inferring latch(es) for signal or variable "Y", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Y[0]" at MATCHER_2.vhd(12)
+Info (10041): Inferred latch for "Y[1]" at MATCHER_2.vhd(12)
+Info (10041): Inferred latch for "Y[2]" at MATCHER_2.vhd(12)
+Info (10041): Inferred latch for "Y[3]" at MATCHER_2.vhd(12)
+Info (10041): Inferred latch for "Y[4]" at MATCHER_2.vhd(12)
+Info (12128): Elaborating entity "MATCHER_3" for hierarchy "MATCHER_3:M2"
+Warning (10631): VHDL Process Statement warning at MATCHER_3.vhd(12): inferring latch(es) for signal or variable "Y", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Y[0]" at MATCHER_3.vhd(12)
+Info (10041): Inferred latch for "Y[1]" at MATCHER_3.vhd(12)
+Info (10041): Inferred latch for "Y[2]" at MATCHER_3.vhd(12)
+Info (10041): Inferred latch for "Y[3]" at MATCHER_3.vhd(12)
+Info (10041): Inferred latch for "Y[4]" at MATCHER_3.vhd(12)
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "O[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "O[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "O[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "O[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "O[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q0[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q0[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q0[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q0[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q0[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q1[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q1[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q1[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q1[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q1[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q2[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q2[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q2[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q2[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "Q2[4]" and its non-tri-state driver.
+Info (13060): One or more bidirs are fed by always enabled tri-state buffers
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q0[0]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q0[1]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q0[2]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q0[3]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q0[4]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q1[0]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q1[1]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q1[2]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q1[3]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q1[4]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q2[0]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q2[1]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q2[2]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q2[3]" is moved to its source
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidir "Q2[4]" is moved to its source
+Warning (13012): Latch MATCHER_3:M2|Y[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR1|signed_unsigned_ADD:N1|rs_SUM_RESULT[3]
+Warning (13012): Latch MATCHER_3:M2|Y[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR1|signed_unsigned_ADD:N1|rs_SUM_RESULT[3]
+Warning (13012): Latch MATCHER_3:M2|Y[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR1|signed_unsigned_ADD:N1|rs_SUM_RESULT[4]
+Warning (13012): Latch MATCHER_3:M2|Y[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR1|signed_unsigned_ADD:N1|rs_SUM_RESULT[4]
+Warning (13012): Latch MATCHER_3:M2|Y[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR1|signed_unsigned_ADD:N1|rs_SUM_RESULT[3]
+Warning (13012): Latch MATCHER_2:M1|Y[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR0|signed_unsigned_ADD:N1|rs_SUM_RESULT[3]
+Warning (13012): Latch MATCHER_2:M1|Y[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR0|signed_unsigned_ADD:N0|rs_SUM_RESULT[1]
+Warning (13012): Latch MATCHER_2:M1|Y[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR0|signed_unsigned_ADD:N1|rs_SUM_RESULT[2]
+Warning (13012): Latch MATCHER_2:M1|Y[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR0|signed_unsigned_ADD:N1|rs_SUM_RESULT[4]
+Warning (13012): Latch MATCHER_2:M1|Y[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AR_CONV:AR0|signed_unsigned_ADD:N1|rs_SUM_RESULT[4]
+Warning (13012): Latch MATCHER_1:M0|Y[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[3]
+Warning (13012): Latch MATCHER_1:M0|Y[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[1]
+Warning (13012): Latch MATCHER_1:M0|Y[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[4]
+Warning (13012): Latch MATCHER_1:M0|Y[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[3]
+Warning (13012): Latch MATCHER_1:M0|Y[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[0]
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "O[0]~synth"
+    Warning (13010): Node "O[1]~synth"
+    Warning (13010): Node "O[2]~synth"
+    Warning (13010): Node "O[3]~synth"
+    Warning (13010): Node "O[4]~synth"
+    Warning (13010): Node "Q0[0]~synth"
+    Warning (13010): Node "Q0[1]~synth"
+    Warning (13010): Node "Q0[2]~synth"
+    Warning (13010): Node "Q0[3]~synth"
+    Warning (13010): Node "Q0[4]~synth"
+    Warning (13010): Node "Q1[0]~synth"
+    Warning (13010): Node "Q1[1]~synth"
+    Warning (13010): Node "Q1[2]~synth"
+    Warning (13010): Node "Q1[3]~synth"
+    Warning (13010): Node "Q1[4]~synth"
+    Warning (13010): Node "Q2[0]~synth"
+    Warning (13010): Node "Q2[1]~synth"
+    Warning (13010): Node "Q2[2]~synth"
+    Warning (13010): Node "Q2[3]~synth"
+    Warning (13010): Node "Q2[4]~synth"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 203 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 0 output pins
+    Info (21060): Implemented 20 bidirectional pins
+    Info (21061): Implemented 160 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 4640 megabytes
+    Info: Processing ended: Wed Dec 09 21:08:22 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+
